@@ -28,7 +28,7 @@ t_measured = t + np.random.normal(0, t_error)
 with open(script_dir+"/../csv/gravity.csv", "w") as fh:
     print("time,height",file=fh)
     for i in range(len(t)):
-        print(f"{t_measured[i]:1f},{z_measured[i]:.2f}", file=fh)
+        print(f"{t_measured[i]:.1f},{z_measured[i]:.2f}", file=fh)
 
 # plot to check
 import matplotlib.pyplot as plt
