@@ -7,6 +7,7 @@ import os
 script_dir = os.path.dirname(__file__)
 
 t = np.linspace(0,10)
-x = np.sin(2*np.pi*t/3)+np.random.uniform(-0.1,0.1,len(t))
+# x = np.sin(2*np.pi*t/3)+np.random.uniform(-0.1,0.1,len(t))
+x =  t**3+t**2+t+np.random.uniform(-0.1,0.1,len(t))
 
-np.savetxt("../csv/wave.csv",list(zip(t,x)),header="t,x",delimiter=",")
+np.savetxt("../csv/poly.csv",list(zip(t,x)),header="t,x",delimiter=",")
